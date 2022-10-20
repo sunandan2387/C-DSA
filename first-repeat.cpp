@@ -33,3 +33,5 @@ int main()
     cout << min << endl;
     return 0;
 }
+
+//checking needed
