@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -13,24 +14,29 @@ int main()
 
 //initialization of variables
 
-    int min;
+;
     int tar[n];
     for (int i = 0; i < n; i++){
         tar[i] = -1;
     }
 
+    int mint;
+
     for (int i = 0; i < n;i++){
-        if(tar[i]!=-1){
-            if(tar[i]<i){
-            min = min;
-            }else{
-                min = tar[i];
-            }
+        if(tar[arr[i]] != -1){
+
+            mint = mint;
         }else{
-            tar[i] = arr[i];
+            tar[arr[i]] = i;
         }
     }
-    cout << min << endl;
+
+    if(mint = INT_MAX){
+        cout << "-1" << endl;
+    }else{
+        cout << mint + 1 << endl;
+    }
+    cout<< mint << endl;
     return 0;
 }
 
