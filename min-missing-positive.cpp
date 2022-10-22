@@ -11,10 +11,12 @@ int main()
     {
         cin >> arr[i];
     }
-
-    for (int i = 1; i <= n; i++){
-        for (int j = 0; j < n; j++){
-if(i != arr[j]){
+    int i=1;
+    while (i<=n){
+        for (int j = 1; j <= n; j++){
+            if(i = arr[j]){
+                i++;
+            }else if(i != arr[j]){
     cout << i << " is not present";
     return 0;
 }
