@@ -14,7 +14,7 @@ int main()
 
 //initialization of variables
 
-;
+
     int tar[n];
     for (int i = 0; i < n; i++){
         tar[i] = -1;
