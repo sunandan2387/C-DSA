@@ -1,3 +1,7 @@
+
+//this gives maximum sum of subarray with o(n) time complexity
+
+
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <climits>

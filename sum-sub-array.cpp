@@ -1,3 +1,7 @@
+//this gives sum of all subarray with o(n2) time complexity
+
+
+
 #include <iostream>
 using namespace std;
 
