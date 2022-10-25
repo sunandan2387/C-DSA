@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <algorithm>
+#include <climits>
 using namespace std;
 
 int main()
@@ -13,19 +14,14 @@ int main()
     }
 
 //initialization of variables
-    int sum=0, maximum=-999999;
+    int sum=0, maximum= INT_MIN;
 
-    for (int i = 0; i < n; i++)
-    { 
-        for (int j = i; j < n; j++)
-        {
-            for (int k = i; k <= j;k++){
-                sum = sum + arr[k];
-                maximum = max(sum, maximum);
-            }
+    for (int i = 0; i < n; i++){
+        sum += arr[i];
+        if(sum<0){
             sum = 0;
         }
-        
+        maximum = max(sum, maximum);
 }
 cout << maximum<<endl;
 
