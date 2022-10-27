@@ -29,6 +29,7 @@ int main(){
                 cout << arr[j][i] << " ";
             }
         }
+        cout << endl;
     }
 
         return 0;
