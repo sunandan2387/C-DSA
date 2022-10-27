@@ -19,31 +19,35 @@ int main(){
 
     cout << endl;
 
-    int i = 0, j = 0, end = (n*m)-1;
+    int rowstart=0, rowend=n-1,colstart=0,colend=m-1;
 
-    for (int k = 1; k <= end; k++)
-        {
-            if (i == 0 && j < m)
-            {
-                cout << arr[i][j] << endl;
-                j++;
-            } else if (j == m && i < n)
-            {
-                cout << arr[i][j] << endl;
-                i++;
-            }
-            else if (i == n-1 && j > 0)
-            {
-                cout << arr[i][j] << endl;
-                j--;
-            }
-            else if (j == 0 && i > 0)
-            {
-                cout << arr[i][j] << endl;
-                i--;
-            }
-           
+    while(rowstart <= rowend && colstart<= colend){
+        for (int col = colstart; col <= colend;col++){
+            cout << arr[rowstart][col] << " ";
         }
+
+        rowstart++;
+
+        for (int row = rowstart; row <= rowend;row++){
+            cout << arr[row][colend] << " ";
+        }
+
+        colend--;
+
+         for (int col = colend; col >= colstart;col--){
+            cout << arr[rowend][col] << " ";
+        }
+
+        rowend--;
+
+        for (int row = rowend; row >= rowstart;row--){
+            cout << arr[row][colstart] << " ";
+        }
+
+        colstart++;
+    }
+
+    
 
     return 0;
 }
