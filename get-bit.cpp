@@ -1,33 +1,30 @@
 #include <bits/stdc++.h>
-#include <string.h>
+
 using namespace std;
 
 main(){
 
-   string wishlist;
-   getline(cin,wishlist);
-   cin.ignore();
-   string item;
-   getline(cin,item);
-
-
-   int start =0, flag =0;
-   string word;
-
-   for (int i = 0; i < wishlist.length()+1;i++){
-    if( (wishlist[i] == ' ') || (wishlist[i] == '\0')){
-        word = wishlist.substr(start, i);
-        if(item.compare(word) == 0){
-            flag = 1;
-        }
-        start = i + 2;
-    } 
-   }
-if(flag ==1){
-    cout << "yoink" << endl;
-}else{
-    cout << "yeet" << endl;
-}
+  // a = 5(00000101), b = 9(00001001)
+    int a = 5, b = 9;
+ 
+    // The result is 00000001
+    cout<<"a = " << a <<","<< " b = " << b <<endl;
+    cout << "a & b = " << (a & b) << endl;
+ 
+    // The result is 00001101
+    cout << "a | b = " << (a | b) << endl;
+ 
+    // The result is 00001100
+    cout << "a ^ b = " << (a ^ b) << endl;
+ 
+    // The result is 11111010
+    cout << "~a = " << (~a) << endl;
+ 
+    // The result is 00010010
+    cout<<"b << 1" <<" = "<< (b << 1) <<endl;
+ 
+    // The result is 00000100
+    cout<<"b >> 1 "<<"= " << (b >> 1 )<<endl;
      
 
    return 0;
