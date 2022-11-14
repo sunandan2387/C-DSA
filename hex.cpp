@@ -12,10 +12,11 @@ int main()
     string n;
     getline(cin, n);
 for(int i=0;i<n.length();i++){
-    if(isdigit(n[i])){
-        sum += n[i]-2;
+    if((int)n[i]>55){
+        sum += ((int)n[i])-55;
+        
     }else{
-sum += ((int)n[i])-55;
+ sum += ((int)n[i])-48;
     }
 }
  cout <<sum<< endl;
