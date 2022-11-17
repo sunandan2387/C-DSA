@@ -4,23 +4,27 @@ using namespace std;
 
 int main(){
 
-    int n,j=2;
+    int n,count;
     cin >> n;
-    int arr[n];
-    int i = 4;
-    while(j<i){
-        if(i%j ==0){
-            arr[i] = 0;
-        }else{
-            arr[i] = 1;
+   
+   
+    
+    for (int i = 1; i <= n; i++){
+        count = 0;
+        for (int j = 1; j <= n;j++){
+            
+            if ( i%j == 0)
+            {
+                count++;
+            }
+
         }
-        i++;
-    }
-    for (int a = 4; a <= n;a++){
-        if(arr[a]==1){
-            cout << a << " ";
-        }
-    }
+         if(count == 2){
+                cout << i << " ";
+            }
+            
+    } 
+
 
         return 0;
 }
